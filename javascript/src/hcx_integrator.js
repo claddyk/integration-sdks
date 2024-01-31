@@ -1,9 +1,11 @@
-import { HCXOutgoingRequest } from "../src/impl/HCXOutgoingRequest.js";
-import { HCXIncomingRequest } from "../src/impl/HCXIncomingRequest.js";
-import { ErrorCodes, ResponseMessage } from "../src/utils/Errors.js";
+import { HCXOutgoingRequest } from "./impl/HCXOutgoingRequest.js";
+import { HCXIncomingRequest } from "./impl/HCXIncomingRequest.js";
+import { ErrorCodes, ResponseMessage } from "./utils/Errors.js";
 
 export class HCXIntegrator {
-  constructor(config) {
+  constructor(config={
+    protocolBasePath, participantCode, participantCode, authBasePath, username, password, igURL
+  }) {
     this.config = config;
     this.protocolBasePath = null;
     this.participantCode = null;
